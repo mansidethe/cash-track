@@ -1,0 +1,26 @@
+.container{
+    margin:20px 100px;
+}
+.transaction-card{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding:10px 20px;
+    margin: 20px 0;
+    box-shadow: 0px 1px 5px 0px gray;
+    position: relative;
+}
+.transaction-amount{
+   font-size: 25px;
+   font-weight: 700; 
+}
+.credit-amount{
+    color: green;
+}
+.debit-amount{
+    color: red;
+}
+.transaction-category{
+position: absolute;
+top: 20px;
+right: 20px;
+}
