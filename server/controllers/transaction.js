@@ -78,42 +78,76 @@ const postApiSignup = async (req, res) => {
             message: err.message
         })
     }
-
-
 }
 
-const postApiLogin = async (req,res)=>{
-    const {email,password} = req.body;
+const postApiLogin = async (req, res) => {
+    const { email, password } = req.body;
 
     // const user = await User.findeOne({})
 
-    if(!email || !password){
+    if (!email || !password) {
         return responder({
             res,
-            success:false,
-            message:"Please provide email and password"
+            success: false,
+            message: "Please provide email and password"
         })
     }
     const user = await User.findOne({
-        email:email,
-        password:password
+        email: email,
+        password: password
     })
 
-    if(user){
+    if (user) {
         return responder({
             res,
-            success:true,
-            data:user,
-            message:"Login successfully"
+            success: true,
+            data: user,
+            message: "Login successfully"
         });
     }
-    else{
+    else {
         return responder({
             res,
-            success:false,
-            message:"Invalid credentials"
+            success: false,
+            message: "Invalid credentials"
         })
     }
 }
 
-export { postApiTransaction, getApiTransaction, postApiSignup, postApiLogin };
+const deleteApiTransaction = async (req, res) => {
+
+    const { id } = req.params;
+    await Transaction.deleteOne({ _id: id });
+    return responder({
+        res,
+        success: true,
+        message: "product deleted successfully"
+    });
+}
+
+const updateApiTransaction = async (req, res) => {
+
+    const { id } = req.params;
+
+    const { amount, type, category, description } = req.body;
+
+    await Transaction.updateOne({ _id: id }, {
+        $set: {
+            amount: amount,
+            type: type,
+            category: category,
+            description: description
+        }
+    });
+    const updatedTransaction = await Transaction.findById({ _id: id });
+
+    return responder({
+        res,
+        success: true,
+        data: updatedTransaction,
+        message: "Transaction updated successfully"
+    });
+
+}
+
+export { postApiTransaction, getApiTransaction, postApiSignup, postApiLogin, deleteApiTransaction, updateApiTransaction };
