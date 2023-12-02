@@ -4,9 +4,10 @@ import { responder } from "../util.js";
 
 const postApiTransaction = async (req, res) => {
 
-    const { amount, type, category, description } = req.body;
+    const { amount, type, category, description, user} = req.body;
 
     const transaction = new Transaction({
+        user,
         amount,
         type,
         category,
@@ -150,4 +151,41 @@ const updateApiTransaction = async (req, res) => {
 
 }
 
-export { postApiTransaction, getApiTransaction, postApiSignup, postApiLogin, deleteApiTransaction, updateApiTransaction };
+const getApiUserTransaction = async(req, res) => {
+
+    try{
+        const {id} = req.params;
+        const findUserTransaction = await Transaction.find({user:id}).populate('user')
+    
+        findUserTransaction.forEach((singleTransaction)=>{
+            singleTransaction.user.password=undefined;
+        })
+       responder({
+            res,
+            success:true,
+            data:findUserTransaction,
+            message:"Fetched user data"
+        })
+    }
+    catch(err){
+        return responder({
+            res,
+            success:false,
+            message:err.message
+        })
+    }
+    }
+
+const getApiTransactionById = async(req,res)=>{
+    const {id} = req.params;
+
+const transaction = await Transaction.findOne({_id: id});
+ return responder({
+    res,
+    success:true,
+    data:transaction,
+    message:"Transaction fetched successfully"
+ });
+}
+
+export { postApiTransaction, getApiTransaction, postApiSignup, postApiLogin, deleteApiTransaction, updateApiTransaction, getApiTransactionById,getApiUserTransaction};

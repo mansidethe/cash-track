@@ -6,9 +6,7 @@ dotenv.config();
 
 
 import {getApiHealth} from './controllers/health.js'
-import {postApiTransaction,getApiTransaction,postApiSignup, postApiLogin,deleteApiTransaction,updateApiTransaction} from './controllers/transaction.js'
-import Transaction from './models/Transaction.js';
-
+import {postApiTransaction,getApiTransaction,postApiSignup, postApiLogin,deleteApiTransaction,updateApiTransaction,getApiUserTransaction, getApiTransactionById} from './controllers/transaction.js'
 
 const app = express();
 app.use(express.json());
@@ -44,7 +42,11 @@ app.delete('/api/transaction/:id',deleteApiTransaction);
 //put / transaction/id
 app.put("/api/transaction/:id",updateApiTransaction);
     
+//get /transaction/user/id
+app.get('/api/transaction/user/:id',getApiUserTransaction)
 
+//get /transaction /id
+app.get('/api/transaction/:id',getApiTransactionById)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
