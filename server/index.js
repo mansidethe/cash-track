@@ -26,8 +26,10 @@ connectDB();
 
 app.get('/api/health',getApiHealth);
 
+//post / transaction
 app.post('/api/transaction', postApiTransaction);
 
+//get / transaction
 app.get('/api/transactions', getApiTransaction);
 
 //post / signup
