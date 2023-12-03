@@ -1,0 +1,12 @@
+.login-form{
+    width: fit-content;
+    margin: 30px auto;
+    padding: 30px 60px;
+    border:1px solid gray;
+  
+}
+.login-btn{
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+}
