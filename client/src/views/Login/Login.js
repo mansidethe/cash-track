@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Login.css'
 import axios from 'axios';
 
@@ -7,7 +8,7 @@ function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPssword] = useState('');
-  
+  const [user, setUser] = useState('');
 
   const login = async () => {
     const response= await axios.post('/api/login',{
@@ -27,19 +28,19 @@ alert(response?.data?.message);
     const storgeUser = JSON.parse(localStorage.getItem('user')||'{}');
     console.log(storgeUser);
 
-    
   },[])
 
   return (
     <div>
       
       <form className="login-form">
-        <h1 >Login</h1>
+        <h1 className='text-center'>Login</h1>
 
         <div>
           <label htmlFor='email'>Email :</label>
           <input type='text'
-           id='email'
+            className='form-control'
+            id='email'
             placeholder='Enter your email'
             value={email} onChange={(e) => {
               setEmail(e.target.value);
@@ -49,6 +50,7 @@ alert(response?.data?.message);
         <div>
           <label htmlFor='password'>Password :</label>
           <input type='password'
+            className='form-control'
             id='password'
             placeholder='Enter your password'
             value={password} onChange={(e) => {
@@ -56,8 +58,14 @@ alert(response?.data?.message);
             }} />
         </div>
 
-        <button type='button' className=' login-btn'onClick={login}>Login</button>
-       </form>
+        <button type='button' className='btn login-btn'onClick={login}>Login</button>
+
+        <p className="text-right">
+          <Link to="/signup">Create a new account</Link>
+        </p>
+
+
+ </form>
     </div>
   )
 }
