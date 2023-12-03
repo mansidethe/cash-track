@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(222, 226, 227);
+  background-color: rgb(235, 251, 247);
 }
 .text-center{
   text-align: center;
@@ -19,7 +19,7 @@ body {
 }
 .btn{
   text-align: center;
-  background-color:rgb(24, 24, 67);
+  background-color:rgb(4, 122, 93);
   color: white;
   border: none;
   border-radius: 10px;
