@@ -26,16 +26,16 @@ connectDB();
 
 app.get('/api/health',getApiHealth);
 
-//post / transaction
+//post / transaction/
 app.post('/api/transaction', postApiTransaction);
 
-//get / transaction
+//get / transaction/
 app.get('/api/transactions', getApiTransaction);
 
-//post / signup
+//post / signup/
 app.post('/api/signup',postApiSignup)
 
-//post /login
+//post /login/
 app.post('/api/login',postApiLogin)
 
 //delete / transaction/id

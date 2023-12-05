@@ -8,31 +8,32 @@ function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPssword] = useState('');
-  const [user, setUser] = useState('');
+
 
   const login = async () => {
-    const response= await axios.post('/api/login',{
-    email:email,
-    password:password
-  });
-alert(response?.data?.message);
+    const response = await axios.post('/api/login', {
+      email: email,
+      password: password
+    });
 
-  if(response?.data?.success){
-  localStorage.setItem("user", JSON.stringify(response?.data?.data));
-  window.location.href="/";
-  }
-  
+    alert(response?.data?.message);
+
+    if (response?.data?.success) {
+      localStorage.setItem("user", JSON.stringify(response?.data?.data));
+      window.location.href = "/home";
+    }
+
   };
 
-  useEffect(()=>{
-    const storgeUser = JSON.parse(localStorage.getItem('user')||'{}');
+  useEffect(() => {
+    const storgeUser = JSON.parse(localStorage.getItem('user') || '{}');
     console.log(storgeUser);
 
-  },[])
+  }, [])
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <form className="login-form">
         <h1 className='text-center'>Login</h1>
 
@@ -58,14 +59,14 @@ alert(response?.data?.message);
             }} />
         </div>
 
-        <button type='button' className='btn login-btn'onClick={login}>Login</button>
+        <button type='button' className='btn login-btn' onClick={login}>Login</button>
 
         <p className="text-right">
           <Link to="/signup">Create a new account</Link>
         </p>
 
 
- </form>
+      </form>
     </div>
   )
 }

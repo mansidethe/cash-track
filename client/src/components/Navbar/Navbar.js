@@ -12,9 +12,13 @@ function Navbar() {
   return (
 
     <div className='navbar'>
-        <Link to ='/' className='navbar-brand'>Cash Track</Link>
+        <Link to ='/home' className='navbar-brand'>Cash Track</Link>
 
         <div className='navbar-links'>
+        <Link to ='/' className='navbar-link'>Transaction</Link>
+
+        <Link to ='/AddTransaction' className='navbar-link'>Add</Link>
+
         <Link to ='/login' className='navbar-link'>Login</Link>
 
         <Link to ='/signup' className='navbar-link'>Signup</Link>

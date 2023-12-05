@@ -3,6 +3,8 @@
     margin: 30px auto;
     padding: 30px 60px;
     border-radius: 10px;
+    border: 1px solid gray;
+    background-color: white;
    }
  .gender{
      margin-left: 20px;

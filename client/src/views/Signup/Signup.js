@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './Signup.css'
 import axios from 'axios'
+import Navbar from '../../components/Navbar/Navbar';
 
 function Signup() {
     const [name, setName] = useState('');
@@ -37,7 +37,7 @@ function Signup() {
             return;
         }
 
-        const response = await axios.post("/signup", {
+        const response = await axios.post("/api/signup", {
             name: name,
             email: email,
             password: password,
@@ -46,16 +46,17 @@ function Signup() {
             gender: gender
         })
 
-        alert(response?.data?.message);
+       
 
         if (response?.data?.success) {
+            alert(response?.data?.message);
             window.location.href = '/login';
         }
     };
 
     return (
         <div>
-           
+            <Navbar />
             <form className="signup-form">
                 <h1 className="text-center">Signup</h1>
 
@@ -142,10 +143,6 @@ function Signup() {
                 >
                     Signup
                 </button>
-
-                <p className="text-right">
-                    <Link to="/login">Already have an account</Link>
-                </p>
 
             </form>
         </div>
