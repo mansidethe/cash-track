@@ -27,17 +27,14 @@ const router = createBrowserRouter([
     element: <Home/>,
   },
   {
-    path: "update",
+    path: "/update/:id",
     element: <Update/>,
   },
   {
-    path: "addtransaction",
+    path: "/addtransaction",
     element: <AddTransaction/>,
   },
-  {
-    path: "update",
-    element: <Update/>,
-  },
+ 
   
 ])
 

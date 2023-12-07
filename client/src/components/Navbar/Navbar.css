@@ -6,9 +6,11 @@
     align-items: center;
 }
 .navbar-brand{
-    text-decoration: none;
+    /* text-decoration: none;
     color:white;
-    font-size: 25px;
+    font-size: 25px; */
+    border-radius: 50%;
+    height: 50px;
 }
 .navbar-link{
     text-decoration: none;

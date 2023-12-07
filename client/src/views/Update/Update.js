@@ -15,7 +15,7 @@ function UpdateTransaction() {
   const { id } = useParams();
 
   const fetchTrans = async () => {
-    const response = await axios.get(`/api/transactions/${id}`)
+    const response = await axios.get(`/api/transaction/${id}`)
     const { amount, type, description, category } = response.data.data;
 
     setAmount(amount)
@@ -28,7 +28,7 @@ function UpdateTransaction() {
   }, [])
 
   const UpdateTransaction = async () => {
-    const response = await axios.put(`/api/transactions/${id}`, {
+    const response = await axios.put(`/api/transaction/${id}`, {
       amount,
       type,
       description,
@@ -38,7 +38,7 @@ function UpdateTransaction() {
     if (response?.data?.data) {
       const successMessage = 'Transaction updated successfully';
       showToast(successMessage, 'success', '3000');
-      window.location.href = '/my-transactions'
+      window.location.href = '/'
     }
 
     setAmount('')

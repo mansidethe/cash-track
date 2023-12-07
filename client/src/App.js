@@ -3,6 +3,8 @@ import axios from 'axios'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import showToast from 'crunchy-toast';
+import Update from './../src/update.png'
+import Delete from './../src/delete.png'
 
 function App() {
 
@@ -55,7 +57,7 @@ useEffect(()=>{
   loadTransactions();
 },[])
 
-const deleteUserTransaction = async(id)=>{
+const deleteTransaction = async(id)=>{
   const response = await axios.delete(`/api/transaction/${id}`);
 
   if(response?.data?.success){
@@ -63,7 +65,7 @@ const deleteUserTransaction = async(id)=>{
     loadTransactions();
   }
 }
-const Update = async(id)=>{
+const updateTransaction = async(id)=>{
   window.location.href=`/update/${id}`
 }
 
@@ -83,7 +85,7 @@ useEffect(()=>{
   return (<>
   <Navbar/>
     <div className='container'>
-      <h1>All Expenses</h1>
+      <h1 className='text-center'>All Expenses</h1>
       <h2>Credit: {creditSum}</h2>
       <h2>Debit: {debitSum}</h2>
 
@@ -108,8 +110,17 @@ const time = new Date(createdAt).toLocaleTimeString();
   {CATEGORY_EMOJI_MAP[category]}
   {category}</span>
 
-  
-  <hr/>{description}
+  <img src={Update}
+                   className='update-image'
+                   onClick={()=>{
+                    updateTransaction(_id)
+                   }}
+                   />
+
+
+  <hr/><p>{description}</p>
+
+  <img src={Delete} className='delete-image' onClick={()=>{deleteTransaction(_id)}} />
 
             </div>
           )

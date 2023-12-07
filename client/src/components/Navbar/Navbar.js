@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {Link} from 'react-router-dom'
 import './Navbar.css'
+import logo from './../Navbar/cashtrack-logo.png'
 
 function Navbar() {
     const [user, setUser] = useState({});
@@ -12,7 +13,7 @@ function Navbar() {
   return (
 
     <div className='navbar'>
-        <Link to ='/home' className='navbar-brand'>Cash Track</Link>
+        <Link to ='/home'><img src={logo}  className='navbar-brand'/></Link>
 
         <div className='navbar-links'>
         <Link to ='/' className='navbar-link'>Transaction</Link>

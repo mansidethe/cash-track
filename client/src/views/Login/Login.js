@@ -29,6 +29,12 @@ function Login() {
     const storgeUser = JSON.parse(localStorage.getItem('user') || '{}');
     console.log(storgeUser);
 
+    
+    if(storgeUser?.email){
+      alert('you are already logged in')
+      window.location.href='/'
+    }
+
   }, [])
 
   return (

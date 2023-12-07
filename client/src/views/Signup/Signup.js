@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './Signup.css'
 import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar';
@@ -53,6 +53,20 @@ function Signup() {
             window.location.href = '/login';
         }
     };
+
+
+    useEffect(() => {
+        const storgeUser = JSON.parse(localStorage.getItem('user') || '{}');
+        console.log(storgeUser);
+    
+        
+        if(storgeUser?.email){
+          alert('you are already logged in')
+          window.location.href='/'
+        }
+    
+      }, [])
+    
 
     return (
         <div>
