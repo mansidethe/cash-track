@@ -13,7 +13,11 @@ function Navbar() {
   return (
 
     <div className='navbar'>
-        <Link to ='/home'><img src={logo}  className='navbar-brand'/></Link>
+
+        <Link to ='/home' className='cash-track-links '>
+          <span className='cash-track-txt'>Cash Track</span>
+        <img src={logo}  className='navbar-brand'/>
+        </Link>
 
         <div className='navbar-links'>
         <Link to ='/' className='navbar-link'>Transaction</Link>

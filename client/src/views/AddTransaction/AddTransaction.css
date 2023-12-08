@@ -1,0 +1,33 @@
+.add-transaction-card{
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 60px;
+    border:1px solid gray;
+  background-color: white;
+ 
+}
+.form-control-regi{
+    width: 100%;
+
+}
+.select-label{
+    font-size: 20px;
+
+}
+.type-text{
+    font-size: 20px;
+}
+.cetgory-text{
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+.btn-addTransaction{
+    position: relative;
+    left: 45px;
+}
+.trans-text{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+}

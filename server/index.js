@@ -4,9 +4,12 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 
+import path from 'path';
 
 import {getApiHealth} from './controllers/health.js'
 import {postApiTransaction,getApiTransaction,postApiSignup, postApiLogin,deleteApiTransaction,updateApiTransaction,getApiUserTransaction, getApiTransactionById} from './controllers/transaction.js'
+
+const __dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -49,6 +52,14 @@ app.get('/api/transaction/user/:id',getApiUserTransaction)
 
 //get /transaction /id
 app.get('/api/transaction/:id',getApiTransactionById)
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+    });
+  }
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

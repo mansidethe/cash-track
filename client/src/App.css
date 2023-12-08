@@ -8,6 +8,7 @@
     margin: 20px 0;
     box-shadow: 0px 1px 5px 0px gray;
     position: relative;
+    background-color: white;
 }
 .transaction-amount{
    font-size: 25px;
@@ -36,4 +37,7 @@ font-size: 20px;
     position: absolute;
     top: 60px;
     right: 10px;
+}
+.desc-text{
+    font-size: 18px;
 }

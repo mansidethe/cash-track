@@ -118,7 +118,7 @@ const time = new Date(createdAt).toLocaleTimeString();
                    />
 
 
-  <hr/><p>{description}</p>
+  <hr/><p className='desc-text'>{description}</p>
 
   <img src={Delete} className='delete-image' onClick={()=>{deleteTransaction(_id)}} />
 

@@ -6,17 +6,22 @@
     align-items: center;
 }
 .navbar-brand{
-    /* text-decoration: none;
-    color:white;
-    font-size: 25px; */
+    position: relative;
+    right: 60px;
     border-radius: 50%;
     height: 50px;
+}
+.cash-track-links{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 30px;
 }
 .navbar-link{
     text-decoration: none;
     color: white;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 30px;
 }
 .navbar-link:hover{
     background-color: black;
@@ -27,13 +32,19 @@
 }
 .hello-user-text{
     color: white;
+    
 }
 .navbar-logout{
     text-decoration: none;
     color:white;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 30px;
     cursor: pointer;
+}
+.cash-track-txt{
+    position: relative;
+    top: -15px;
+    right: 80px;
 }
 
 @media screen and (max-width: 668px) {

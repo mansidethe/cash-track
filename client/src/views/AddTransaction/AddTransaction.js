@@ -28,92 +28,100 @@ function AddTransactions() {
             window.location.href = '/';
         }
     }
-    return (
-        <>
-            <Navbar />
-            <form>
-                <div className='transaction-container'>
-                    <h2 className='text-center '>Add Transactions</h2>
 
-                    <div>
-                        <input
-                            type='number'
-                            placeholder='enter Amount'
-                            className='form-control-regi'
-                            value={amount}
-                            onChange={(e) => {
-                                setAmount(e.target.value)
-                            }}
-                        />
-                        <label className='ms-3 type-text'>Type:- </label>
-                        <div className='type-container'>
-                            <input
-                                type='radio'
-                                className='gender-type'
-                                value="credit"
-                                checked={type === "credit"}
-                                onChange={(e) => {
-                                    if (e.target.checked) {
-                                        setType(e.target.value)
-                                    }
-                                }}
-                            /> <label className='type-text'>Credit</label>
+return (
+    <div>
+         <Navbar/>
+        <div>
+           
+<form className='add-transaction-card form-control'>
+<div className='text-center'>
+<span className='trans-text'>Add Transaction</span>
+</div>
+<div>
+<input
+ type='number'
+ placeholder='Enter amount'
+className='form-control-regi all-font-size'
+ value={amount}
+ onChange={(e) => {
+ setAmount(e.target.value)
+  }}
+/>
+</div>
 
-                            <input
-                                type='radio'
-                                className='gender-type'
-                                name="amounttype"
-                                value="debit"
-                                checked={type === "debit"}
-                                onChange={(e) => {
-                                    if (e.target.checked) {
-                                        setType(e.target.value)
-                                    }
-                                }}
-                            /> <label className='type-text'>Debit</label>
-                        </div>
-                        <div className=''>
-                            <label className='cetgory-text'>Category :-</label><br />
-                            <select
-                                className='form-control-regi'
-                                value={category}
-                                onChange={(e) => {
-                                    setCategory(e.target.value)
-                                }}>
-                                <option >select category here</option>
-                                <option value="food">Food</option>
-                                <option value="entertainement">Entertainment</option>
-                                <option value="shopping">Shopping</option>
-                                <option value="rent">Rent</option>
-                                <option value="travel">Travel</option>
-                                <option value="education">Education</option>
-                                <option value="salary">Salary</option>
-                                <option value="freelancing">Freelancing</option>
-                                <option value="side-hussle">Side-hussle</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
+<label className='cetgory-text '>Category :</label>
+<div className='select-label'>
+<select
+ className='form-control-regi all-font-size'
+value={category}
+ onChange={(e) => {
+setCategory(e.target.value)
+ }}>
+<option >select category</option>
+<option value="food">Food</option>
+<option value="entertainement">Entertainment</option>
+<option value="shopping">Shopping</option>
+<option value="rent">Rent</option>
+<option value="travel">Travel</option>
+<option value="education">Education</option>
+<option value="salary">Salary</option>
+<option value="freelancing">Freelancing</option>
+<option value="side-hussle">Side-hussle</option>
+<option value="other">Other</option>
+</select>
+</div>
 
-                        <input
-                            type='text'
-                            placeholder='enter description'
-                            className='form-control-regi'
-                            value={description}
-                            onChange={(e) => {
-                                setDescription(e.target.value)
-                            }}
-                        />
+<label className='all-font-size'>Type : </label>
+<div>
+<input
+type='radio'
+className='gender-type'
+name="amounttype"
+value="debit"
+checked={type === "debit"}
+onChange={(e) => {
+if (e.target.checked) {
+setType(e.target.value)
+ }
+}}
+/><label className='type-text'>Debit</label>
 
-                        <button
-                            type='button'
-                            className='button btn-addTransaction'
-                            onClick={addransaction}>Add Transaction</button>
-                    </div>
-                </div>
+</div>
 
-            </form>
+<div>
+<input
+type='radio'
+className='gender-type'
+value="credit"
+checked={type === "credit"}
+onChange={(e) => {
+if (e.target.checked) {
+setType(e.target.value)
+}
+}}
+/> <label className='type-text all-font-size'>Credit</label><br /><br />
+</div>
 
-        </>
-    )
+<div>
+<input
+type='text'
+placeholder='enter description'
+className='form-control-regi all-font-size'
+value={description}
+onChange={(e) => {
+setDescription(e.target.value)
+ }}
+/>
+</div>
+
+<div><button
+type='button'
+ className='btn btn-addTransaction'
+onClick={addransaction}>Add Transaction</button></div>
+</form>
+        </div>
+    </div>
+)
 }
 export default AddTransactions;
