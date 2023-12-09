@@ -10,7 +10,13 @@
     right: 60px;
     border-radius: 50%;
     height: 50px;
+    box-shadow: 1px 0px 15px 1px white;
 }
+.navbar-brand:hover{
+    box-shadow: 1px 0px 15px 1px gold;
+    transition: 0.3s;
+} 
+
 .cash-track-links{
     text-decoration: none;
     color: white;
@@ -24,10 +30,9 @@
     margin: 0 30px;
 }
 .navbar-link:hover{
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color:gold ;
+    /* padding: 5px 10px;
+    border-radius: 5px; */
     transition: 0.3s;
 }
 .hello-user-text{
@@ -41,10 +46,18 @@
     margin: 0 30px;
     cursor: pointer;
 }
+.navbar-logout:hover{
+    color:gold ;
+    transition: 0.3s;
+}
 .cash-track-txt{
     position: relative;
     top: -15px;
     right: 80px;
+}
+.cash-track-txt:hover{
+    color:gold ;
+    transition: 0.3s; 
 }
 
 @media screen and (max-width: 668px) {

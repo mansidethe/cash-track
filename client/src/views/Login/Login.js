@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './Login.css'
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from './../../components/Footer/Footer'
 
 function Login() {
 
@@ -70,9 +71,8 @@ function Login() {
         <p className="text-right">
           <Link to="/signup">Create a new account</Link>
         </p>
-
-
-      </form>
+</form>
+<Footer/>
     </div>
   )
 }

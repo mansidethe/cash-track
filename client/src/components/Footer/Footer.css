@@ -1,0 +1,39 @@
+.footer-container{
+    background-color: #1b8381;
+}
+.footer-card{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-links{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+   margin: 0 auto;
+   align-items: center;
+}
+.footer-links:hover{
+    color:gold ;
+    transition: 0.3s;
+}
+.images-container{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-image{
+    border-radius: 50%;
+    height: 50px;
+    box-shadow: 1px 0px 15px 1px white;
+}
+.footer-image:hover{
+    box-shadow: 1px 0px 15px 1px gold;
+    transition: 0.3s;
+}
+.footer-link-container{
+    text-align: center;
+}
+.footer-feature-container{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}

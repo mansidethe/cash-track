@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import './Signup.css'
 import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from './../../components/Footer/Footer'
 
 function Signup() {
     const [name, setName] = useState('');
@@ -157,8 +158,8 @@ function Signup() {
                 >
                     Signup
                 </button>
-
-            </form>
+</form>
+<Footer/>
         </div>
     )
 }

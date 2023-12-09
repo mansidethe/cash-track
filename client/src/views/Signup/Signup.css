@@ -3,7 +3,7 @@
     margin: 30px auto;
     padding: 30px 60px;
     border-radius: 10px;
-    border: 1px solid gray;
+ box-shadow: 1px 0px 15px 1px gray;
     background-color: white;
    }
  .gender{

@@ -2,6 +2,7 @@ import react, { useState } from 'react';
 import './AddTransaction.css';
 import axios from "axios";
 import Navbar from "./../../components/Navbar/Navbar";
+import Footer from './../../components/Footer/Footer'
 import showToast from 'crunchy-toast';
 
 
@@ -121,6 +122,7 @@ type='button'
 onClick={addransaction}>Add Transaction</button></div>
 </form>
         </div>
+        <Footer/>
     </div>
 )
 }

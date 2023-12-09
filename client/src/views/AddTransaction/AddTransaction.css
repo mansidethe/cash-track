@@ -2,9 +2,9 @@
     width: fit-content;
     margin: 30px auto;
     padding: 10px 60px;
-    border:1px solid gray;
   background-color: white;
- 
+ border-radius: 10px;
+ box-shadow: 1px 0px 15px 1px gray;
 }
 .form-control-regi{
     width: 100%;

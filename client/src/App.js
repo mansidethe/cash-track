@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import showToast from 'crunchy-toast';
 import Update from './../src/update.png'
 import Delete from './../src/delete.png'
@@ -84,7 +85,7 @@ useEffect(()=>{
 
   return (<>
   <Navbar/>
-    <div className='container'>
+    <div className='container tasks-container'>
       <h1 className='text-center'>All Expenses</h1>
       <h2>Credit: {creditSum}</h2>
       <h2>Debit: {debitSum}</h2>
@@ -127,6 +128,7 @@ const time = new Date(createdAt).toLocaleTimeString();
         })
       }
     </div>
+    <Footer/>
     </>
   )
 }

@@ -20,7 +20,9 @@ function Navbar() {
         </Link>
 
         <div className='navbar-links'>
-        <Link to ='/' className='navbar-link'>Transaction</Link>
+        <Link to ='/home' className='navbar-link'>Home</Link>
+
+        <Link to ='/' className='navbar-link'>All transaction</Link>
 
         <Link to ='/AddTransaction' className='navbar-link'>Add</Link>
 
