@@ -4,11 +4,12 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 
-import path from 'path';
+
 
 import {getApiHealth} from './controllers/health.js'
 import {postApiTransaction,getApiTransaction,postApiSignup, postApiLogin,deleteApiTransaction,updateApiTransaction,getApiUserTransaction, getApiTransactionById} from './controllers/transaction.js'
 
+import path from 'path';
 const __dirname = path.resolve();
 
 const app = express();
