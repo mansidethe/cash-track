@@ -1,60 +1,90 @@
-.container{
-    margin:20px 100px;
+.container {
+    margin: 20px 100px;
     height: 90vh;
 }
-.transaction-card{
+
+.transaction-card {
     border: 1px solid gray;
     border-radius: 5px;
-    padding:10px 20px;
+    padding: 10px 20px;
     margin: 20px 0;
     box-shadow: 0px 1px 5px 0px gray;
     position: relative;
     background-color: white;
 }
-.transaction-amount{
-   font-size: 25px;
-   font-weight: 700; 
+
+.transaction-amount {
+    font-size: 25px;
+    font-weight: 700;
 }
-.credit-amount{
+
+.credit-amount {
     color: green;
 }
-.debit-amount{
+
+.debit-amount {
     color: red;
 }
-.transaction-category{
-position: absolute;
-top: 10px;
-right: 80px;
-font-size: 20px;
+
+.transaction-category {
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    font-size: 20px;
 }
-.update-image{
+
+.update-image {
     height: 50px;
     position: absolute;
     top: -0px;
     right: 10px;
 }
-.delete-image{
+
+.delete-image {
     height: 40px;
     position: absolute;
     top: 60px;
     right: 10px;
 }
-.desc-text{
+
+.desc-text {
     font-size: 18px;
 }
-.tasks-container{
+
+/* .tasks-container{
     height: 600px;
     overflow-y: scroll;
 }
 .tasks-container::-webkit-scrollbar{
     width: 5px;
-}
-@media screen and (max-width: 668px){
-    .transaction-card{
-     width: 200px;
-    }  
-    .tasks-container{
-    height: 600px;
-    overflow-y: scroll;
-}
+} */
+@media screen and (max-width: 668px) {
+    .transaction-card {
+        width: 320px;
+        position: relative;
+        right: 86px;
+    }
+
+    .tasks-container {
+        height: 600px;
+    }
+
+    .tasks-container::-webkit-scrollbar {
+        display: none;
+    }
+    .transaction-category {
+        position: absolute;
+        top: 65px;
+        right: 100px;
+        font-size: 20px;
+    }
+    .update-image {
+        height: 40px;
+        position: absolute;
+        top: 58px;
+        right: 45px;
+    }
+    .delete-image {
+        height: 30px;
+    }
 }

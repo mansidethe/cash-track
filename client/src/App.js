@@ -23,6 +23,7 @@ const CATEGORY_EMOJI_MAP = {
   "education":"📚",
   "freelansing":"💻side",
   "side-hussle":"👔👗",
+  "salary":"💸",
   "other":"🤷‍♂️"
 }
 
