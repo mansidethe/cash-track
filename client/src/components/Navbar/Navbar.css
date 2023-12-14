@@ -83,4 +83,11 @@ color: black;
     padding: 0 ;
    transition: none;
 }
+.cash-track-txt{
+    right: 30px;
+}
+.navbar-brand{
+    right: 20px;
+   
+}
 }

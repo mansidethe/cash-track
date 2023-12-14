@@ -32,3 +32,8 @@ body {
   font-size: 20px;
   margin: 20px auto;
 }
+@media screen and (max-width: 668px){
+  .form-control{
+   width: 200px;
+}
+}

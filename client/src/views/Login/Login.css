@@ -12,3 +12,8 @@
     margin: 10px auto;
     width: 150px;
 }
+@media screen and (max-width: 668px){
+    .login-form{
+        width: 200px;
+    } 
+}

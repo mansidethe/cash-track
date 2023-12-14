@@ -32,3 +32,22 @@ font-weight: 900;
 .text-cash{
     margin-top: 125px;
    }
+   @media screen and (max-width: 668px){
+    .home{
+        display: block;
+    }
+    .image{
+        height: 210px;
+        width: 290px;
+       margin-top: 50px;
+       margin-left: 55px;
+    }
+    .home-text{
+        font-size: 25px;
+       position: relative;
+       top: -83px;
+       left: 50px;
+       
+    }
+      
+   }

@@ -31,3 +31,11 @@
     text-align: center;
     font-weight: 800;
 }
+@media screen and (max-width: 668px){
+    .add-transaction-card{
+        width: 200px;
+    }
+    .btn-addTransaction{
+        left: 9px;
+    }
+}

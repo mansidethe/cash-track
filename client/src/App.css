@@ -1,6 +1,6 @@
 .container{
     margin:20px 100px;
-    height: 100vh;
+    height: 90vh;
 }
 .transaction-card{
     border: 1px solid gray;
@@ -45,9 +45,16 @@ font-size: 20px;
 .tasks-container{
     height: 600px;
     overflow-y: scroll;
-    
 }
-
 .tasks-container::-webkit-scrollbar{
     width: 5px;
+}
+@media screen and (max-width: 668px){
+    .transaction-card{
+     width: 200px;
+    }  
+    .tasks-container{
+    height: 600px;
+    overflow-y: scroll;
+}
 }

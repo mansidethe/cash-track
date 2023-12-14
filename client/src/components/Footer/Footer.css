@@ -37,3 +37,15 @@
     font-size: 20px;
     color: white;
 }
+@media screen and (max-width: 668px){
+    .footer-card{
+        display: block;
+      } 
+      .footer-heading{
+text-align: center;
+}
+.footer-container{
+   position: relative;
+   top: -20px;
+}
+}

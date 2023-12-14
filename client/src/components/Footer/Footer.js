@@ -11,7 +11,7 @@ function Footer() {
       <div className='footer-card'>
 
       <div>
-        <h1>FEATURES</h1>
+        <h1 className='footer-heading'>FEATURES</h1>
         <div className='footer-feature-container'>
         <p>Track all record</p>
         <p>Manage the daily expense</p>
@@ -20,7 +20,7 @@ function Footer() {
       </div>
 
       <div>
-        <h1>QUICK LINKS</h1>
+        <h1 className='footer-heading'>QUICK LINKS</h1>
         <div className='footer-link-container'>
         <p><Link to="/home" className='footer-links'>Home</Link> </p>
         <p><Link to="/" className='footer-links' >All transactions</Link> </p>
@@ -31,7 +31,7 @@ function Footer() {
       </div>
 
       <div>
-        <h1>CONTACT US</h1>
+        <h1 className='footer-heading'>CONTACT US</h1>
         <div className='images-container'>
         <div>
         <p><Link to='https://github.com/mansidethe'><img src={Github} className='footer-image'/></Link></p>
